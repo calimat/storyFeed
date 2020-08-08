@@ -1,12 +1,12 @@
 import Foundation
 
-public class StoryFeed {
+public class StoryFeed : Feed {
     public var stories:[Story]!
     public init() {
         stories = []
     }
-    public func add(_ story:Story, addedDate:Date? = Date()) {
-        stories.append(story)
+    public func add(_ story:FeedItem, addedDate:Date? = Date()) {
+        stories.append(story as! Story)
         story.setAddeddate(date: addedDate)
         let expirationDate = calendar.date(byAdding: .hour, value: HOURS_EXPIRATIONTIME, to: addedDate!)
         story.setExpirationDate(date: expirationDate)

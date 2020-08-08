@@ -14,6 +14,8 @@
 		F6E54E3624DE693E0094338D /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E54E3524DE693E0094338D /* Story.swift */; };
 		F6E54E3824DE6F760094338D /* storyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E54E3724DE6F760094338D /* storyTests.swift */; };
 		F6E54E3A24DE81DB0094338D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E54E3924DE81DB0094338D /* Settings.swift */; };
+		F6E54E3C24DF2A570094338D /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E54E3B24DF2A570094338D /* Feed.swift */; };
+		F6E54E3E24DF2B040094338D /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E54E3D24DF2B040094338D /* FeedItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,8 @@
 		F6E54E3524DE693E0094338D /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		F6E54E3724DE6F760094338D /* storyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storyTests.swift; sourceTree = "<group>"; };
 		F6E54E3924DE81DB0094338D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		F6E54E3B24DF2A570094338D /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		F6E54E3D24DF2B040094338D /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,11 +83,9 @@
 		F6E54E1924DE66290094338D /* storyFeed */ = {
 			isa = PBXGroup;
 			children = (
-				F6E54E1A24DE66290094338D /* storyFeed.h */,
-				F6E54E1B24DE66290094338D /* Info.plist */,
-				F6E54E3124DE675E0094338D /* StoryFeed.swift */,
-				F6E54E3524DE693E0094338D /* Story.swift */,
-				F6E54E3924DE81DB0094338D /* Settings.swift */,
+				F6E54E4024DF2C520094338D /* Protocols */,
+				F6E54E3F24DF2C390094338D /* Settings */,
+				F6E54E4224DF2C7C0094338D /* Implementation */,
 			);
 			path = storyFeed;
 			sourceTree = "<group>";
@@ -91,11 +93,55 @@
 		F6E54E2424DE66290094338D /* storyFeedTests */ = {
 			isa = PBXGroup;
 			children = (
-				F6E54E2524DE66290094338D /* storyFeedTests.swift */,
-				F6E54E2724DE66290094338D /* Info.plist */,
-				F6E54E3724DE6F760094338D /* storyTests.swift */,
+				F6E54E4324DF2CE40094338D /* Settings */,
+				F6E54E4424DF2CF20094338D /* ImplementationTests */,
 			);
 			path = storyFeedTests;
+			sourceTree = "<group>";
+		};
+		F6E54E3F24DF2C390094338D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F6E54E3924DE81DB0094338D /* Settings.swift */,
+				F6E54E1B24DE66290094338D /* Info.plist */,
+				F6E54E1A24DE66290094338D /* storyFeed.h */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		F6E54E4024DF2C520094338D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F6E54E3B24DF2A570094338D /* Feed.swift */,
+				F6E54E3D24DF2B040094338D /* FeedItem.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F6E54E4224DF2C7C0094338D /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				F6E54E3124DE675E0094338D /* StoryFeed.swift */,
+				F6E54E3524DE693E0094338D /* Story.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		F6E54E4324DF2CE40094338D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F6E54E2724DE66290094338D /* Info.plist */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		F6E54E4424DF2CF20094338D /* ImplementationTests */ = {
+			isa = PBXGroup;
+			children = (
+				F6E54E2524DE66290094338D /* storyFeedTests.swift */,
+				F6E54E3724DE6F760094338D /* storyTests.swift */,
+			);
+			path = ImplementationTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,7 +255,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6E54E3224DE675E0094338D /* StoryFeed.swift in Sources */,
+				F6E54E3C24DF2A570094338D /* Feed.swift in Sources */,
 				F6E54E3A24DE81DB0094338D /* Settings.swift in Sources */,
+				F6E54E3E24DF2B040094338D /* FeedItem.swift in Sources */,
 				F6E54E3624DE693E0094338D /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
