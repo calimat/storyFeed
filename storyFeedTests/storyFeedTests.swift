@@ -23,5 +23,9 @@ class storyFeedTests: XCTestCase {
         XCTAssertEqual(sut.stories.count, 2)
     }
     
+    func test_remove_WhenStoriesAreEmptyThrowsAnError() {
+        XCTAssertThrowsError(try sut.remove())
+    }
+    
 
 }
