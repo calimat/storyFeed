@@ -9,11 +9,19 @@
 import Foundation
 
 public class Story {
+   
     private var _id:UUID
+    private var _creationDate:Date
+    
+    public var creationDate:Date {
+        return _creationDate
+    }
+    
     public  var  id:  UUID  {
         return self._id
     }
-    public init(id:UUID) {
+    public init(id:UUID, creationDate:Date = Date()) {
         self._id = id
+        self._creationDate = creationDate
     }
 }
