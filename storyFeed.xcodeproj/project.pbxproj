@@ -10,6 +10,7 @@
 		F6E54E2124DE66290094338D /* storyFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E54E1724DE66290094338D /* storyFeed.framework */; };
 		F6E54E2624DE66290094338D /* storyFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E54E2524DE66290094338D /* storyFeedTests.swift */; };
 		F6E54E2824DE66290094338D /* storyFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = F6E54E1A24DE66290094338D /* storyFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6E54E3224DE675E0094338D /* StoryFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E54E3124DE675E0094338D /* StoryFeed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		F6E54E2024DE66290094338D /* storyFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = storyFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E54E2524DE66290094338D /* storyFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storyFeedTests.swift; sourceTree = "<group>"; };
 		F6E54E2724DE66290094338D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6E54E3124DE675E0094338D /* StoryFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryFeed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				F6E54E1A24DE66290094338D /* storyFeed.h */,
 				F6E54E1B24DE66290094338D /* Info.plist */,
+				F6E54E3124DE675E0094338D /* StoryFeed.swift */,
 			);
 			path = storyFeed;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					F6E54E1624DE66290094338D = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 					F6E54E1F24DE66290094338D = {
 						CreatedOnToolsVersion = 11.6;
@@ -195,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6E54E3224DE675E0094338D /* StoryFeed.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +345,7 @@
 		F6E54E2C24DE66290094338D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = AMLYNCKP6M;
@@ -356,6 +362,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.petitcoding.storyFeed;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +371,7 @@
 		F6E54E2D24DE66290094338D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = AMLYNCKP6M;
@@ -388,6 +396,7 @@
 		F6E54E2F24DE66290094338D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AMLYNCKP6M;
 				INFOPLIST_FILE = storyFeedTests/Info.plist;
@@ -406,6 +415,7 @@
 		F6E54E3024DE66290094338D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AMLYNCKP6M;
 				INFOPLIST_FILE = storyFeedTests/Info.plist;

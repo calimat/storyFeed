@@ -9,9 +9,6 @@
 import XCTest
 @testable import storyFeed
 
-public class StoryFeed {
-    var numberOfStories = 0
-}
 
 class storyFeedTests: XCTestCase {
 
