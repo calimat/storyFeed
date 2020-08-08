@@ -11,7 +11,7 @@ public class StoryFeed {
     }
     
     public func remove() throws {
-        if(stories.count != 1) {
+        if(stories.count < 1) {
             throw NSError(domain: "Error", code: 0)
         }
         
