@@ -74,5 +74,10 @@ class storyFeedTests: XCTestCase {
         XCTAssertEqual(sut.stories[1].id, thirdSToryID)
     }
     
+    func test_addStory_changesStoryAddedDateToCurrentDate() {
+        addOneStoryToTheFeed()
+        XCTAssertNotNil(sut.stories[0].addedDate)
+    }
+    
 
 }

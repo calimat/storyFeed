@@ -18,6 +18,10 @@ public class Story {
         return _addedDate
     }
     
+    public func setAddeddate(date:Date?) {
+        self._addedDate = date
+    }
+    
     public var expirationDate:Date? {
         return _expirationDate
     }
