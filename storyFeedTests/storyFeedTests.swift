@@ -27,5 +27,12 @@ class storyFeedTests: XCTestCase {
         XCTAssertThrowsError(try sut.remove())
     }
     
+    func test_remove_WhenThereIsOneStoryDoesNotThrowError() {
+        let story = Story()
+        sut.add(story)
+        XCTAssertNoThrow(try sut.remove())
+       
+    }
+    
 
 }
