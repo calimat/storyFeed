@@ -5,7 +5,7 @@ class storyFeedTests: XCTestCase {
 
     let sut = StoryFeed()
     let anyID = UUID()
-    
+  
     func test_storyFeedInitializesWithZeroStories() {
         XCTAssertEqual(sut.stories.count, 0)
     }
@@ -85,7 +85,6 @@ class storyFeedTests: XCTestCase {
     
     //MARK: - Helpers
     func getDate(day:Int? = 8, month:Int? = 8, year:Int? = 2020, hour:Int = 1, minute:Int? = 29, second:Int? = 0, timeZone:TimeZone = TimeZone(abbreviation: "BOT") ?? TimeZone.current) -> Date? {
-        let calendar = Calendar.current
         var components = DateComponents()
         components.day = day
         components.month = month

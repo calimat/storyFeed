@@ -1,10 +1,6 @@
 import Foundation
 
-
 public class StoryFeed {
-    let calendar = Calendar.current
-    let HOURS_EXPIRATIONTIME = 24
-    
     public var stories:[Story]!
     public init() {
         stories = []

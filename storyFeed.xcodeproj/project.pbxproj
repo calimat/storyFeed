@@ -13,6 +13,7 @@
 		F6E54E3224DE675E0094338D /* StoryFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E54E3124DE675E0094338D /* StoryFeed.swift */; };
 		F6E54E3624DE693E0094338D /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E54E3524DE693E0094338D /* Story.swift */; };
 		F6E54E3824DE6F760094338D /* storyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E54E3724DE6F760094338D /* storyTests.swift */; };
+		F6E54E3A24DE81DB0094338D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E54E3924DE81DB0094338D /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		F6E54E3124DE675E0094338D /* StoryFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryFeed.swift; sourceTree = "<group>"; };
 		F6E54E3524DE693E0094338D /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		F6E54E3724DE6F760094338D /* storyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storyTests.swift; sourceTree = "<group>"; };
+		F6E54E3924DE81DB0094338D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				F6E54E1B24DE66290094338D /* Info.plist */,
 				F6E54E3124DE675E0094338D /* StoryFeed.swift */,
 				F6E54E3524DE693E0094338D /* Story.swift */,
+				F6E54E3924DE81DB0094338D /* Settings.swift */,
 			);
 			path = storyFeed;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6E54E3224DE675E0094338D /* StoryFeed.swift in Sources */,
+				F6E54E3A24DE81DB0094338D /* Settings.swift in Sources */,
 				F6E54E3624DE693E0094338D /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
