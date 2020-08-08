@@ -104,12 +104,8 @@ class storyFeedTests: XCTestCase {
     }
     
     func addTwoStoriesToTheFeed() {
-        let storyID1 = UUID()
-        let storyID2 = UUID()
-        let story1 = Story(id: storyID1)
-        let story2 = Story(id: storyID2)
-        sut.add(story1)
-        sut.add(story2)
+        addOneStoryToTheFeed()
+        addOneStoryToTheFeed()
     }
     
     
