@@ -59,8 +59,19 @@ class storyFeedTests: XCTestCase {
         
         XCTAssertEqual(sut.stories.count, 1)
         XCTAssertEqual(sut.stories[0].id, storyIdNotRemoved)
+    }
+    
+    func test_removeWhenThereAreThreeStorieAndRemovesTheMiddleOneIsNotThere() {
+        addOneStoryToTheFeed()
+        addTwoStoriesToTheFeed()
+        let storyIDtoBeRemoved = sut.stories[1].id
+        let firstStoryID = sut.stories[0].id
+        let thirdSToryID = sut.stories[2].id
         
-        
+        try? sut.remove(storyIDtoBeRemoved)
+        XCTAssertEqual(sut.stories.count, 2)
+        XCTAssertEqual(sut.stories[0].id, firstStoryID)
+        XCTAssertEqual(sut.stories[1].id, thirdSToryID)
     }
     
 
