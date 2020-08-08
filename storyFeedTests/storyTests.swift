@@ -22,4 +22,10 @@ class storyTests: XCTestCase {
         let sut = Story(id: storyID)
         XCTAssertNil(sut.addedDate)
     }
+    
+    func test_StoryHasExpirationDateNil() {
+        let storyID = UUID()
+        let sut = Story(id: storyID)
+        XCTAssertNil(sut.expirationDate)
+    }
 }
