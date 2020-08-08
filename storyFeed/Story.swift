@@ -9,5 +9,11 @@
 import Foundation
 
 public class Story {
-    public init() { }
+    private var _id:UUID
+    public  var  id:  UUID  {
+        return self._id
+    }
+    public init(id:UUID) {
+        self._id = id
+    }
 }
