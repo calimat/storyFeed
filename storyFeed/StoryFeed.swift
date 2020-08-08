@@ -6,9 +6,9 @@ public class StoryFeed {
     public init() {
         stories = []
     }
-    public func add(_ story:Story) {
+    public func add(_ story:Story, addedDate:Date? = Date()) {
         stories.append(story)
-        story.setAddeddate(date: Date())
+        story.setAddeddate(date: addedDate)
         story.setExpirationDate(date: Date())
     }
     

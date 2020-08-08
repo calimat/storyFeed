@@ -10,10 +10,10 @@ class storyFeedTests: XCTestCase {
         XCTAssertEqual(sut.stories.count, 0)
     }
     
-    func addOneStoryToTheFeed() {
+    func addOneStoryToTheFeed(addedDate:Date? = Date()) {
         let storyID1 = UUID()
         let story = Story(id: storyID1)
-        sut.add(story)
+        sut.add(story, addedDate: addedDate)
     }
     
     func addTwoStoriesToTheFeed() {
@@ -77,6 +77,22 @@ class storyFeedTests: XCTestCase {
     func test_addStory_changesStoryAddedDateToCurrentDate() {
         addOneStoryToTheFeed()
         XCTAssertNotNil(sut.stories[0].addedDate)
+    }
+    
+    func test_addStory_changesStoryAddedDateToNow() {
+        let calendar = Calendar.current
+        var components = DateComponents()
+        components.day = 8
+        components.month = 8
+        components.year = 2020
+        components.hour = 1
+        components.minute = 29
+        components.second = 0
+        components.timeZone = TimeZone(abbreviation: "BOT")
+        let currentDate = calendar.date(from: components)
+        addOneStoryToTheFeed(addedDate: currentDate)
+        XCTAssertEqual(sut.stories[0].addedDate, currentDate)
+        
     }
     
     func test_addStoryChangesStoryExpirationDateAfterAdding() {
