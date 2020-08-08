@@ -11,6 +11,7 @@
 		F6E54E2624DE66290094338D /* storyFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E54E2524DE66290094338D /* storyFeedTests.swift */; };
 		F6E54E2824DE66290094338D /* storyFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = F6E54E1A24DE66290094338D /* storyFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6E54E3224DE675E0094338D /* StoryFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E54E3124DE675E0094338D /* StoryFeed.swift */; };
+		F6E54E3624DE693E0094338D /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E54E3524DE693E0094338D /* Story.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		F6E54E2524DE66290094338D /* storyFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storyFeedTests.swift; sourceTree = "<group>"; };
 		F6E54E2724DE66290094338D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6E54E3124DE675E0094338D /* StoryFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryFeed.swift; sourceTree = "<group>"; };
+		F6E54E3524DE693E0094338D /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				F6E54E1A24DE66290094338D /* storyFeed.h */,
 				F6E54E1B24DE66290094338D /* Info.plist */,
 				F6E54E3124DE675E0094338D /* StoryFeed.swift */,
+				F6E54E3524DE693E0094338D /* Story.swift */,
 			);
 			path = storyFeed;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6E54E3224DE675E0094338D /* StoryFeed.swift in Sources */,
+				F6E54E3624DE693E0094338D /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
