@@ -10,9 +10,11 @@ public class StoryFeed {
         stories.append(story)
     }
     
-    public func remove() throws {
+    public func remove(_ storyId: UUID?) throws {
         if(stories.count < 1) {
             throw NSError(domain: "Error", code: 0)
+        } else {
+            stories = stories.filter { $0.id != storyId }
         }
         
     }

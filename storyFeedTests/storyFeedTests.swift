@@ -4,6 +4,7 @@ import storyFeed
 class storyFeedTests: XCTestCase {
 
     let sut = StoryFeed()
+    let anyID = UUID()
     
     func test_storyFeedInitializesWithZeroStories() {
         XCTAssertEqual(sut.stories.count, 0)
@@ -35,18 +36,31 @@ class storyFeedTests: XCTestCase {
     }
     
     func test_remove_WhenStoriesAreEmptyThrowsAnError() {
-        XCTAssertThrowsError(try sut.remove())
+        XCTAssertThrowsError(try sut.remove(anyID))
     }
     
     func test_remove_WhenThereIsOneStoryDoesNotThrowError() {
         addOneStoryToTheFeed()
-        XCTAssertNoThrow(try sut.remove())
+        XCTAssertNoThrow(try sut.remove(anyID))
        
     }
     
     func test_remove_WhenThereAreTwoStoriesDoesNotThrowError() {
         addTwoStoriesToTheFeed()
-        XCTAssertNoThrow(try sut.remove())
+        XCTAssertNoThrow(try sut.remove(anyID))
+    }
+    
+    func test_remove_WhenThereAreTwoStoriesItRemovesTheCorrectOne() {
+        addTwoStoriesToTheFeed()
+        let storyIdToRemove = sut.stories[0].id
+        let storyIdNotRemoved = sut.stories[1].id
+        
+        try? sut.remove(storyIdToRemove)
+        
+        XCTAssertEqual(sut.stories.count, 1)
+        XCTAssertEqual(sut.stories[0].id, storyIdNotRemoved)
+        
+        
     }
     
 
