@@ -9,17 +9,25 @@ class storyFeedTests: XCTestCase {
         XCTAssertEqual(sut.stories.count, 0)
     }
     
-    func test_add_AddsOneStoryToTheFeedAndNumberOFStoriesShouldBeOne() {
+    func addOneStoryToTheFeed() {
         let story = Story()
         sut.add(story)
-        XCTAssertEqual(sut.stories.count, 1)
     }
     
-    func test_add_AddsTwoStoriesToTheFeedAndNumberOfStoriesShouldBeTwo() {
+    func addTwoStoriesToTheFeed() {
         let story1 = Story()
         let story2 = Story()
         sut.add(story1)
         sut.add(story2)
+    }
+    
+    func test_add_AddsOneStoryToTheFeedAndNumberOFStoriesShouldBeOne() {
+        addOneStoryToTheFeed()
+        XCTAssertEqual(sut.stories.count, 1)
+    }
+    
+    func test_add_AddsTwoStoriesToTheFeedAndNumberOfStoriesShouldBeTwo() {
+        addTwoStoriesToTheFeed()
         XCTAssertEqual(sut.stories.count, 2)
     }
     
@@ -28,18 +36,13 @@ class storyFeedTests: XCTestCase {
     }
     
     func test_remove_WhenThereIsOneStoryDoesNotThrowError() {
-        let story = Story()
-        sut.add(story)
+        addOneStoryToTheFeed()
         XCTAssertNoThrow(try sut.remove())
        
     }
     
     func test_remove_WhenThereAreTwoStoriesDoesNotThrowError() {
-        let story1 = Story()
-        let story2 = Story()
-        sut.add(story1)
-        sut.add(story2)
-        
+        addTwoStoriesToTheFeed()
         XCTAssertNoThrow(try sut.remove())
     }
     
