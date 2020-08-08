@@ -10,21 +10,6 @@ class storyFeedTests: XCTestCase {
         XCTAssertEqual(sut.stories.count, 0)
     }
     
-    func addOneStoryToTheFeed(addedDate:Date? = Date()) {
-        let storyID1 = UUID()
-        let story = Story(id: storyID1)
-        sut.add(story, addedDate: addedDate)
-    }
-    
-    func addTwoStoriesToTheFeed() {
-        let storyID1 = UUID()
-        let storyID2 = UUID()
-        let story1 = Story(id: storyID1)
-        let story2 = Story(id: storyID2)
-        sut.add(story1)
-        sut.add(story2)
-    }
-    
     func test_add_AddsOneStoryToTheFeedAndNumberOFStoriesShouldBeOne() {
         addOneStoryToTheFeed()
         XCTAssertEqual(sut.stories.count, 1)
@@ -80,16 +65,7 @@ class storyFeedTests: XCTestCase {
     }
     
     func test_addStory_changesStoryAddedDateToNow() {
-        let calendar = Calendar.current
-        var components = DateComponents()
-        components.day = 8
-        components.month = 8
-        components.year = 2020
-        components.hour = 1
-        components.minute = 29
-        components.second = 0
-        components.timeZone = TimeZone(abbreviation: "BOT")
-        let currentDate = calendar.date(from: components)
+        let currentDate = getDate()
         addOneStoryToTheFeed(addedDate: currentDate)
         XCTAssertEqual(sut.stories[0].addedDate, currentDate)
         
@@ -99,6 +75,44 @@ class storyFeedTests: XCTestCase {
         addOneStoryToTheFeed()
         XCTAssertNotNil(sut.stories[0].expirationDate)
     }
+    
+    func test_addStory_ExpirationDateChangesForExpirationTimeInHours() {
+        let currentDate = getDate()
+        let expirationDate = getDate(day:9)
+        addOneStoryToTheFeed(addedDate: currentDate)
+        XCTAssertEqual(sut.stories[0].expirationDate, expirationDate)
+    }
+    
+    //MARK: - Helpers
+    func getDate(day:Int? = 8, month:Int? = 8, year:Int? = 2020, hour:Int = 1, minute:Int? = 29, second:Int? = 0, timeZone:TimeZone = TimeZone(abbreviation: "BOT") ?? TimeZone.current) -> Date? {
+        let calendar = Calendar.current
+        var components = DateComponents()
+        components.day = day
+        components.month = month
+        components.year = year
+        components.hour = hour
+        components.minute = minute
+        components.second = second
+        components.timeZone = TimeZone(abbreviation: "BOT")
+        let currentDate = calendar.date(from: components)
+        return currentDate
+    }
+    
+    func addOneStoryToTheFeed(addedDate:Date? = Date()) {
+        let storyID1 = UUID()
+        let story = Story(id: storyID1)
+        sut.add(story, addedDate: addedDate)
+    }
+    
+    func addTwoStoriesToTheFeed() {
+        let storyID1 = UUID()
+        let storyID2 = UUID()
+        let story1 = Story(id: storyID1)
+        let story2 = Story(id: storyID2)
+        sut.add(story1)
+        sut.add(story2)
+    }
+    
     
 
 }

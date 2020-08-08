@@ -9,7 +9,9 @@ public class StoryFeed {
     public func add(_ story:Story, addedDate:Date? = Date()) {
         stories.append(story)
         story.setAddeddate(date: addedDate)
-        story.setExpirationDate(date: Date())
+        let calendar = Calendar.current
+        let expirationDate = calendar.date(byAdding: .hour, value: 24, to: addedDate!)
+        story.setExpirationDate(date: expirationDate)
     }
     
     public func remove(_ storyId: UUID?) throws {
