@@ -7,6 +7,6 @@ public class StoryFeed {
         self.numberOfStories = 0
     }
     public func add(_ story:Story) {
-        self.numberOfStories = 1
+        self.numberOfStories += 1
     }
 }
