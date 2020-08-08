@@ -22,6 +22,10 @@ public class Story {
         self._addedDate = date
     }
     
+    public func setExpirationDate(date:Date?) {
+        self._expirationDate = date 
+    }
+    
     public var expirationDate:Date? {
         return _expirationDate
     }

@@ -9,6 +9,7 @@ public class StoryFeed {
     public func add(_ story:Story) {
         stories.append(story)
         story.setAddeddate(date: Date())
+        story.setExpirationDate(date: Date())
     }
     
     public func remove(_ storyId: UUID?) throws {

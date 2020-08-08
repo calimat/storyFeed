@@ -79,5 +79,10 @@ class storyFeedTests: XCTestCase {
         XCTAssertNotNil(sut.stories[0].addedDate)
     }
     
+    func test_addStoryChangesStoryExpirationDateAfterAdding() {
+        addOneStoryToTheFeed()
+        XCTAssertNotNil(sut.stories[0].expirationDate)
+    }
+    
 
 }
