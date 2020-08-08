@@ -2,11 +2,11 @@ import Foundation
 
 
 public class StoryFeed {
-    public var numberOfStories:Int!
+    public var stories:[Story]!
     public init() {
-        self.numberOfStories = 0
+        stories = []
     }
     public func add(_ story:Story) {
-        self.numberOfStories += 1
+        stories.append(story)
     }
 }
