@@ -2,6 +2,9 @@ import Foundation
 
 
 public class StoryFeed {
+    let calendar = Calendar.current
+    let HOURS_EXPIRATIONTIME = 24
+    
     public var stories:[Story]!
     public init() {
         stories = []
@@ -9,8 +12,7 @@ public class StoryFeed {
     public func add(_ story:Story, addedDate:Date? = Date()) {
         stories.append(story)
         story.setAddeddate(date: addedDate)
-        let calendar = Calendar.current
-        let expirationDate = calendar.date(byAdding: .hour, value: 24, to: addedDate!)
+        let expirationDate = calendar.date(byAdding: .hour, value: HOURS_EXPIRATIONTIME, to: addedDate!)
         story.setExpirationDate(date: expirationDate)
     }
     

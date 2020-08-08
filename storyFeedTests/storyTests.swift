@@ -12,20 +12,22 @@ import storyFeed
 class storyTests: XCTestCase {
 
     func test_StoryHasID() {
-        let storyID = UUID()
-        let sut = Story(id: storyID)
-        XCTAssertNotNil(sut.id)
+        XCTAssertNotNil(makeSUT().id)
     }
 
     func test_StoryHasAddedDateNil() {
-        let storyID = UUID()
-        let sut = Story(id: storyID)
-        XCTAssertNil(sut.addedDate)
+        XCTAssertNil(makeSUT().addedDate)
     }
     
     func test_StoryHasExpirationDateNil() {
+        XCTAssertNil(makeSUT().expirationDate)
+    }
+    
+    //MARK: -Helpers
+    
+    func makeSUT() -> Story {
         let storyID = UUID()
         let sut = Story(id: storyID)
-        XCTAssertNil(sut.expirationDate)
+        return sut
     }
 }
