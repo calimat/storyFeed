@@ -83,6 +83,10 @@ class storyFeedTests: XCTestCase {
         XCTAssertEqual(sut.stories[0].expirationDate, expirationDate)
     }
     
+    func test_validStoriesWhenPassedNilDate_ShouldReturnError() {
+        XCTAssertThrowsError(try sut.validate(nil))
+    }
+    
     //MARK: - Helpers
     func getDate(day:Int? = 8, month:Int? = 8, year:Int? = 2020, hour:Int = 1, minute:Int? = 29, second:Int? = 0, timeZone:TimeZone = TimeZone(abbreviation: "BOT") ?? TimeZone.current) -> Date? {
         var components = DateComponents()
