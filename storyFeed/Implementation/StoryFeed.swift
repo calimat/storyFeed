@@ -26,5 +26,10 @@ public class StoryFeed : Feed {
         if( date == nil ) {
             throw anyError
         }
+        for story in stories {
+            if(story.expirationDate == date) {
+                try? remove(story.id)
+            }
+        }
     }
 }
