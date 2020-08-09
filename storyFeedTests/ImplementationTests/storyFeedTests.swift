@@ -108,6 +108,14 @@ class storyFeedTests: XCTestCase {
         XCTAssertEqual(sut.stories.count, 0)
     }
     
+    func test_validateASingleStoryWhenAddedDateWasADayEarlierWithAnHourLater_StoriesShouldBeOne() {
+        let currentDate = getDate()
+        let yesterdayDateHourLater = getDate(day: 7, hour:2)
+        addOneStoryToTheFeed(addedDate: yesterdayDateHourLater)
+        try? sut.validate(currentDate)
+        XCTAssertEqual(sut.stories.count, 1)
+    }
+    
     //MARK: - Helpers
     func getDate(day:Int? = 8, month:Int? = 8, year:Int? = 2020, hour:Int = 1, minute:Int? = 29, second:Int? = 0, timeZone:TimeZone = TimeZone(abbreviation: "BOT") ?? TimeZone.current) -> Date? {
         var components = DateComponents()
