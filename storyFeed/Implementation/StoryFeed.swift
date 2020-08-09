@@ -27,7 +27,7 @@ public class StoryFeed : Feed {
             throw anyError
         }
         for story in stories {
-            if(story.expirationDate == date) {
+            if(story.expirationDate! <= date!) {
                 try? remove(story.id)
             }
         }
