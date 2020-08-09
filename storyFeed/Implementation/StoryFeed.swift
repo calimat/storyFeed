@@ -23,6 +23,8 @@ public class StoryFeed : Feed {
     }
     
     public func validate(_ date: Date?) throws {
-        throw anyError
+        if( date == nil ) {
+            throw anyError
+        }
     }
 }
