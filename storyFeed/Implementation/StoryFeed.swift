@@ -1,6 +1,7 @@
 import Foundation
 
 public class StoryFeed : Feed {
+    private let anyError = NSError(domain: "Error", code: 0)
     public var stories:[Story]!
     public init() {
         stories = []
@@ -14,7 +15,7 @@ public class StoryFeed : Feed {
     
     public func remove(_ storyId: UUID?) throws {
         if(stories.count < 1) {
-            throw NSError(domain: "Error", code: 0)
+            throw anyError
         } else {
             stories = stories.filter { $0.id != storyId }
         }
@@ -22,6 +23,6 @@ public class StoryFeed : Feed {
     }
     
     public func validate(_ date: Date?) throws {
-        throw NSError(domain: "Error", code: 0 )
+        throw anyError
     }
 }
